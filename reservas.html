@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Mesa | Sensi Sushi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .booking-container {
+            max-width: 550px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
 
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(10, 10, 12, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--text-light);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .booking-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">SENSI <span>壽司</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="experiencia.html">Experiência</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="reservas.html" class="active">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <p>Garante o teu lugar</p>
+        <h1>Reserva de Mesa</h1>
+    </div>
+
+    <main class="main-content">
+        <div class="booking-container" data-aos="fade-up">
+            
+            <form onsubmit="enviarReservaWhatsApp(event)">
+                
+                <div class="form-group">
+                    <label for="res-nome">Nome *</label>
+                    <input type="text" id="res-nome" class="form-control" placeholder="O teu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="res-pessoas">Quantas pessoas? *</label>
+                    <select id="res-pessoas" class="form-control" required>
+                        <option value="1 Pessoa">1 Pessoa</option>
+                        <option value="2 Pessoas" selected>2 Pessoas</option>
+                        <option value="3 Pessoas">3 Pessoas</option>
+                        <option value="4 Pessoas">4 Pessoas</option>
+                        <option value="5 Pessoas">5 Pessoas</option>
+                        <option value="6 Pessoas">6 Pessoas</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res-data">Dia *</label>
+                        <input type="date" id="res-data" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="res-hora">Hora *</label>
+                        <select id="res-hora" class="form-control" required>
+                            <option value="">Hora</option>
+                            <optgroup label="Almoço">
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                            </optgroup>
+                            <optgroup label="Jantar">
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-nav" style="width: 100%; margin-top: 1rem; padding: 0.9rem; border: none; cursor: pointer; font-size: 1rem; text-align: center; background: #25D366; color: #fff;">
+                    💬 Confirmar via WhatsApp
+                </button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sensi Sushi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="js/script.js"></script>
+</body>
+</html>
