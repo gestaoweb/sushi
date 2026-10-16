@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos & Localização | Sensi Sushi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
+
+        .info-icon {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-text p, .info-text a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .info-text a:hover {
+            color: var(--gold);
+        }
+
+        .contact-form-box {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .contact-form-box h3 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(10, 10, 12, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--text-light);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .map-section {
+            margin-top: 4rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            height: 400px;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">SENSI <span>壽司</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="experiencia.html">Experiência</a></li>
+            <li><a href="contactos.html" class="active">Contactos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <p>Apoio ao Cliente & Localização</p>
+        <h1>Fale Connosco</h1>
+    </div>
+
+    <main class="main-content">
+        <div class="contact-grid">
+            
+            <div class="contact-info-card" data-aos="fade-right">
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h4>Localização</h4>
+                        <p>Avenida da Liberdade, 180<br>1250-146 Lisboa, Portugal</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <h4>Reservas & Chamadas</h4>
+                        <p><a href="tel:+351210000000">+351 210 000 000</a> (Rede fixa nacional)</p>
+                        <p><a href="https://wa.me/351910000000" target="_blank" style="color: var(--whatsapp-green); font-weight: 600;">💬 Mensagem via WhatsApp</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">
+                        <h4>E-mail & Eventos Privados</h4>
+                        <p><a href="mailto:geral@sensisushi.pt">geral@sensisushi.pt</a></p>
+                        <p><a href="mailto:eventos@sensisushi.pt">eventos@sensisushi.pt</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-text">
+                        <h4>Horário de Funcionamento</h4>
+                        <p><strong>Terça a Domingo:</strong></p>
+                        <p>Almoço: 12h30 – 15h00 | Jantar: 19h30 – 23h30</p>
+                        <p style="color: #e74c3c; margin-top: 0.3rem;"><small>Encerra à Segunda-feira</small></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🅿️</div>
+                    <div class="info-text">
+                        <h4>Estacionamento</h4>
+                        <p>Parque de estacionamento subterrâneo em frente ao restaurante com serviço de *Valet Parking* aos fins de semana.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-form-box" data-aos="fade-left">
+                <h3>Envie-nos uma Mensagem</h3>
+                <p>Para dúvidas, catering, eventos de empresa ou imprensa, preencha o formulário abaixo.</p>
+
+                <form onsubmit="enviarContacto(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Ex: Rodrigo Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" class="form-control" placeholder="exemplo@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" class="form-control">
+                            <option value="Dúvida Geral">Dúvida Geral</option>
+                            <option value="Evento Privado / Catering">Evento Privado / Catering</option>
+                            <option value="Alergias e Restrições">Alergias / Restrições Alimentares</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" class="form-control" placeholder="Escreva a sua mensagem aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-nav" style="width: 100%; border: none; padding: 0.9rem; cursor: pointer; font-size: 1rem;">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="map-section" data-aos="fade-up">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.756303975005!2d-9.148187823438067!3d38.72338875624795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0d19337f2a74c2ad%3A0xd6099b240e83b4b8!2sAv.%20da%20Liberdade%2C%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1700000000000!5m2!1spt-PT!2spt" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sensi Sushi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="js/script.js"></script>
+    <script>
+        function enviarContacto(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            alert(`Obrigado, ${nome}! A sua mensagem foi enviada com sucesso. Responderemos em menos de 24h.`);
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
 
