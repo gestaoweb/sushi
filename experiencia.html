@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Experiência | Sensi Sushi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .exp-section {
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
 
+        .exp-text h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .exp-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .exp-img {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        @media (max-width: 900px) {
+            .exp-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .exp-section.reverse {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação Uniformizada -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">SENSI <span>壽司</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="experiencia.html" class="active">Experiência</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <p>Filosofia & Arte</p>
+        <h1>A Experiência Sensi</h1>
+    </div>
+
+    <main class="main-content">
+        
+        <!-- Secção 1 -->
+        <section class="exp-section" data-aos="fade-up">
+            <div class="exp-text">
+                <p style="color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Tradição Ancestral</p>
+                <h2>A Arte do Omakase</h2>
+                <p>Na cultura japonesa, Omakase significa "deixo aos seus cuidados". No Sensi Sushi, esta é a nossa filosofia suprema. O cliente abdixa da escolha convencional para entregar-se por completo à criatividade e intuição do nosso Mestre Sushi.</p>
+                <p>Cada peça é uma narrativa construída com rigor, respeitando a sazonalidade e a pureza absoluta do ingrediente.</p>
+            </div>
+            <div class="exp-img" style="background-image: url('https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1000');"></div>
+        </section>
+
+        <!-- Secção 2 -->
+        <section class="exp-section" data-aos="fade-up" style="direction: rtl;">
+            <div class="exp-text" style="direction: ltr;">
+                <p style="color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Rigorsidade & Seleção</p>
+                <h2>Do Atlântico ao Prato</h2>
+                <p>Acreditamos que o verdadeiro sushi começa muito antes de chegar à mesa. Selecionamos diariamente o melhor peixe da costa portuguesa e atum de leilão certificado.</p>
+                <p>O arroz, temperado com vinagre de arroz artesanal segundo preceitos centenários, é mantido à temperatura exata do corpo humano para garantir uma textura irrepreensível a cada dentada.</p>
+            </div>
+            <div class="exp-img" style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1000');" style="direction: ltr;"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sensi Sushi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="js/script.js"></script>
+</body>
+</html>
