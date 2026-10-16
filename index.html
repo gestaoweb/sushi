@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensi Sushi | Alta Gastronomia Japonesa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos exclusivos para a Hero & Secções da Página Inicial */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(10, 10, 12, 0.65), rgba(10, 10, 12, 0.95)), 
+                        url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+        }
 
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.7rem 1.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* Secção Destaques */
+        .features-section {
+            padding: 5rem 5%;
+            background: var(--bg-dark);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+        }
+
+        .section-title p {
+            color: var(--gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+        }
+
+        .feature-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-body {
+            padding: 1.8rem;
+        }
+
+        .feature-body h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .feature-body p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero { height: 80vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar">
+    <a href="index.html" class="logo">SENSI <span>壽司</span></a>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="experiencia.html">Experiência</a></li>
+        <li><a href="contactos.html">Contactos</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+    </ul>
+    </nav>
+
+    <!-- BANNER PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <p class="hero-subtitle">Tradição & Modernidade</p>
+            <h1>A Arte do Sushi Elevada ao Máximo Requinte</h1>
+            <p>Uma experiência sensorial única onde a frescura dos ingredientes do Atlântico se funde com a precisão secular dos mestres de Tóquio.</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn-nav" style="padding: 0.7rem 1.8rem;">Ver Carta Omakase</a>
+                <a href="reservas.html" class="btn-outline">Reservar Experiência</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO DE DESTAQUES -->
+    <section class="features-section">
+        <div class="section-title" data-aos="fade-up">
+            <p>O que nos distingue</p>
+            <h2>Uma Jornada Gastronómica</h2>
+        </div>
+
+        <div class="features-grid">
+            
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="feature-body">
+                    <h3>Peixe Fresco Diário</h3>
+                    <p>Trabalhamos exclusivamente com peixe sustentável de captura diária na nossa costa e atum de qualidade de leilão.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="feature-body">
+                    <h3>Experiência no Balcão</h3>
+                    <p>Senta-te na barra principal e observa os nossos Chefs a prepararem cada peça com precisão cirúrgica à tua frente.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-img" style="background-image: url('https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="feature-body">
+                    <h3>Harmonização Rara</h3>
+                    <p>Uma seleção de saqués artesanais raros importados diretamente do Japão e vinhos brancos nacionais premiados.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sensi Sushi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- APAGAR ESTE BLOCO -->
+<div id="cart-sidebar" class="cart-sidebar">
+   ...
+</div>
