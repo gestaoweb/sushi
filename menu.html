@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Premium | Sensi Sushi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Navegação -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">SENSI <span>壽司</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="experiencia.html">Experiência</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <p>Experiência Gastronómica</p>
+        <h1>A Nossa Carta Omakase</h1>
+    </div>
+
+    <main class="main-content">
+        <!-- Filtros -->
+        <div class="menu-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="sushi">Sushi & Sashimi</button>
+            <button class="filter-btn" data-category="quentes">Pratos Quentes</button>
+            <button class="filter-btn" data-category="bebidas">Saqués & Vinhos</button>
+        </div>
+
+        <!-- Grelha de Pratos -->
+        <div class="menu-grid">
+            
+            <!-- Item 1 -->
+            <div class="menu-card" data-category="sushi" data-aos="fade-up">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800');" onclick="abrirModal('combo-sensi')"></div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>Combo Sensi Premium</h3>
+                        <span class="price">32,50 €</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">24 peças selecionadas com toques de trufa artesanal.</p>
+                    <div class="card-actions">
+                        <button class="btn-card" onclick="abrirModal('combo-sensi')" style="width: 100%;">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card" data-category="sushi" data-aos="fade-up">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=800');" onclick="abrirModal('sashimi-toro')"></div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>Sashimi Atum Toro</h3>
+                        <span class="price">18,00 €</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">8 fatias finas da ventresca com wasabi artesanal.</p>
+                    <div class="card-actions">
+                        <button class="btn-card" onclick="abrirModal('sashimi-toro')" style="width: 100%;">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card" data-category="quentes" data-aos="fade-up">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800');" onclick="abrirModal('ramen-pato')"></div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>Ramen de Pato</h3>
+                        <span class="price">16,50 €</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">Caldo 12h, massa artesanal e pato fumado.</p>
+                    <div class="card-actions">
+                        <button class="btn-card" onclick="abrirModal('ramen-pato')" style="width: 100%;">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL DE DETALHES DO PRATO -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+            <span class="modal-badge">Detalhes do Prato</span>
+            <h2 id="modal-title" class="modal-title">---</h2>
+            <div class="modal-detail-box">
+                <p><strong>Descrição:</strong> <span id="modal-desc" style="color: var(--text-muted);">---</span></p>
+            </div>
+            <div class="modal-detail-box">
+                <p>⚠️ <strong>Alergénios:</strong> <span id="modal-allergens" style="color: var(--text-muted);">---</span></p>
+            </div>
+            <div class="modal-detail-box" style="border-left-color: #27ae60;">
+                <p>🍶 <strong>Harmonização Sugerida:</strong> <span id="modal-pairing" style="color: var(--text-muted);">---</span></p>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+                <span id="modal-price" style="font-size: 1.5rem; color: var(--gold); font-weight: 700;">0.00 €</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sensi Sushi. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="js/script.js"></script>
+</body>
+</html>
